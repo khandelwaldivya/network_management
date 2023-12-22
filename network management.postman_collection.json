@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "d52650ab-536d-4c69-8d12-801afd8e4977",
+		"name": "network management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17652496"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "div@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "div khandelwal",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8002/createUser/"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "div@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/userLogin/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"userLogin",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImRpdkBnbWFpbC5jb20iLCJleHAiOjE3MDMyMjQ4MDIsImVtYWlsIjoiZGl2QGdtYWlsLmNvbSJ9.k44h9WUXhoc6IoiQPr6yeN6hMQqsfmIJoDcbmv_hz1U"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8002/userSearch/?search=priya",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"userSearch",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "priya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friend View",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VybmFtZSI6ImRpeWFAZ21haWwuY29tIiwiZXhwIjoxNzAzMjMxMTE4LCJlbWFpbCI6ImRpeWFAZ21haWwuY29tIn0.-g1zywqKtGal9ibSLD0Ou9fkEGNlhGfBDC7ymS2cNP8"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8002/friendView/"
+			},
+			"response": []
+		},
+		{
+			"name": "send Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "to_user",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8002/sendRequest/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"sendRequest",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friend Request show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8002/friendRequest/"
+			},
+			"response": []
+		}
+	]
+}
